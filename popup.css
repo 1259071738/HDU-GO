@@ -1,0 +1,5 @@
+* {margin: 0; padding: 0;}
+body {width: 300px; font-family: Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", "微软雅黑", STHeiti, "华文细黑", sans-serif;}
+::-webkit-scrollbar {width: 8px;} 
+::-webkit-scrollbar-track {border-radius: 4px; background-color: #f5f5f5;} 
+::-webkit-scrollbar-thumb {border-radius: 4px; background-color: #999;} 

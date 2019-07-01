@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>HDU-GO</title>
+	<script src="lib/mdui@0.4.2/js/mdui.min.js"></script>
+	<link href="lib/mdui@0.4.2/css/mdui.min.css" rel="stylesheet">
+	<script src="./js/utils.js"></script>
+	<script src="./popup.js"></script>
+	<link href="./popup.css" rel="stylesheet">
+</head>
+<body>
+	<ul class="mdui-list" mdui-collapse="{accordion: true}">
+
+		<li class="mdui-collapse-item">
+			<div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+				<i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">assignment</i>
+				<div class="mdui-list-item-content">HDU-GO 公告板</div>
+				<i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+			</div>
+			<ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+				<li class="mdui-list-item mdui-ripple">Overview</li>
+				<li class="mdui-list-item mdui-ripple">Language</li>
+				<li class="mdui-list-item mdui-ripple">Location</li>
+				<li class="mdui-list-item mdui-ripple">New vs Returning</li>
+			</ul>
+		</li>
+
+		<li class="mdui-divider"></li>
+
+		<li class="mdui-collapse-item" id="pickLesson">
+			<div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+				<i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-orange">web</i>
+				<div class="mdui-list-item-content">抢课 - 通识选修课</div>
+				<i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+			</div>
+			<ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+				<li class="mdui-list-item mdui-ripple">查看使用方法</li>
+
+				<label class="mdui-list-item mdui-ripple mdui-switch">
+					<div class="mdui-list-item-content">绕过验证码</div>
+					<input type="checkbox" name="blockCaptcha"/>
+					<i class="mdui-switch-icon"></i>
+				</label>
+
+				<label class="mdui-list-item mdui-ripple mdui-switch">
+					<div class="mdui-list-item-content">选中选课框</div>
+					<input type="checkbox" name="chooseCheckbox"/>
+					<i class="mdui-switch-icon"></i>
+				</label>
+
+				<label class="mdui-list-item mdui-ripple mdui-switch">
+					<div class="mdui-list-item-content">自动刷新</div>
+					<input type="checkbox" name="autoRefresh"/>
+					<i class="mdui-switch-icon"></i>
+				</label>
+
+				<label class="mdui-list-item mdui-ripple mdui-switch">
+					<div class="mdui-list-item-content">自动提交选课</div>
+					<input type="checkbox" name="autoSubmit"/>
+					<i class="mdui-switch-icon"></i>
+				</label>
+			</ul>
+		</li>
+
+		<li class="mdui-collapse-item" id="calculateCredit">
+			<div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+				<i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-indigo">device_hub</i>
+				<div class="mdui-list-item-content">学分统计</div>
+				<i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+			</div>
+			<ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+				<li class="mdui-list-item mdui-ripple">查看使用方法</li>
+
+				<label class="mdui-list-item mdui-ripple mdui-switch">
+					<div class="mdui-list-item-content">功能开启</div>
+					<input type="checkbox" name="enabled"/>
+					<i class="mdui-switch-icon"></i>
+				</label>
+			</ul>
+		</li>
+
+		<li class="mdui-collapse-item" id="rateTeacher">
+			<div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+				<i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">touch_app</i>
+				<div class="mdui-list-item-content">自动学评教</div>
+				<i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+			</div>
+			<ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+				<li class="mdui-list-item mdui-ripple">查看使用方法</li>
+
+				<label class="mdui-list-item mdui-ripple mdui-switch">
+					<div class="mdui-list-item-content">功能开启</div>
+					<input type="checkbox" name="enabled"/>
+					<i class="mdui-switch-icon"></i>
+				</label>
+
+				<label class="mdui-list-item mdui-ripple">
+					<div class="mdui-list-item-content">9A + 1B</div>
+					<div class="mdui-radio">
+						<input type="radio" name="level" value="A"/>
+						<i class="mdui-radio-icon"></i>
+					</div>
+				</label>
+
+				<label class="mdui-list-item mdui-ripple">
+					<div class="mdui-list-item-content">9B + 1C</div>
+					<div class="mdui-radio">
+						<input type="radio" name="level" value="B"/>
+						<i class="mdui-radio-icon"></i>
+					</div>
+				</label>
+
+				<label class="mdui-list-item mdui-ripple">
+					<div class="mdui-list-item-content">9C + 1D</div>
+					<div class="mdui-radio">
+						<input type="radio" name="level" value="C"/>
+						<i class="mdui-radio-icon"></i>
+					</div>
+				</label>
+			</ul>
+		</li>
+
+		<li class="mdui-divider"></li>
+
+		<li class="mdui-list-item mdui-ripple">
+			<i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-green">system_update_alt</i>
+			<div class="mdui-list-item-content">检查更新</div>
+		</li>
+	</ul>
+</body>
+</html>
